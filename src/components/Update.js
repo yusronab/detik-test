@@ -33,9 +33,9 @@ export const updateData = [
 
 const Update = () => {
     return (
-        <div className='flex flex-col gap-y-8 p-[10%]'>
+        <div id="update" className='flex flex-col gap-y-8 p-[10%]'>
             <h2 className='text-2xl text-blue-500 font-bold'>LATEST UPDATE</h2>
-            <div className='grid gap-5 grid-cols-3'>
+            <div className='grid gap-5 grid-cols-2 md:grid-cols-3'>
                 {updateData.map((item, index) => (
                     <div key={index}>
                         <img
@@ -43,7 +43,7 @@ const Update = () => {
                             alt=''
                             className='h-[200px] w-full object-cover rounded'
                         />
-                        <p className='font-bold py-2'>{item.title}</p>
+                        <p className='line-clamp-2 md:font-bold my-2'>{item.title}</p>
                         <span className='text-sm text-slate-500'>{item.date}</span>
                     </div>
                 ))}

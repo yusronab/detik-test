@@ -8,7 +8,7 @@ import {
 
 const About = () => {
     return (
-        <div className='flex flex-col lg:flex-row gap-x-8 p-[10%]'>
+        <div id="about" className='flex flex-col lg:flex-row gap-x-8 p-[10%]'>
             <div className='w-[400px] lg:w-[35vw] h-[200px] mx-auto'>
                 <ReactPlayer
                     url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"

@@ -36,23 +36,26 @@ export const mechaData = [
 
 const Mechanism = () => {
     return (
-        <div className='w-screen flex relative bg-gradient-to-t from-blue-500 from-20% 
-        via-blue-300 via-40% to-blue-500 to-80% '>
+        <div id='mechanism' className='w-screen flex relative bg-gradient-to-t from-blue-500
+        from-20% via-blue-300 via-40% to-blue-500 to-80% '>
             <div className='w-4/5 mx-auto py-28 z-[1]'>
-                <h2 className='text-4xl font-extrabold text-white mb-5'>Mekanisme</h2>
+                <h2 className='text-2xl md:text-4xl font-extrabold text-white mb-5'>
+                    Mekanisme
+                </h2>
                 {mechaData.map((item, index) => (
                     <div key={index} className='bg-white p-8 mb-5 rounded-md flex gap-x-3'>
                         <div className='rounded-full bg-blue-500 p-3 text-white h-fit'>
                             {item.icon}
                         </div>
                         <div className='flex flex-col gap-y-3'>
-                            <div className='flex justify-between text-xl text-blue-500 font-bold'>
+                            <div className='flex justify-between md:text-xl text-blue-500
+                            font-bold'>
                                 <p>{item.title}</p>
                                 <p>{item.date}</p>
                             </div>
                             {item.step.map((step, index) => (
                                 <div key={index} className='flex'>
-                                    <span className='block mr-2'>{index+1}.</span>
+                                    <span className='block mr-2'>{index + 1}.</span>
                                     {step}
                                 </div>
                             ))}

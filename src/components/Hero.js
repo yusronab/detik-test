@@ -8,7 +8,9 @@ const Hero = () => {
             <div className='absolute z-[2] left-1/2 top-1/2 -translate-x-1/2
             -translate-y-1/2 flex flex-col items-center text-white'>
                 <p>Detikfinace Business Plan Competition 2023</p>
-                <h2 className='text-4xl font-bold my-3'>EMPOWERING INDONESIA STARTUP</h2>
+                <h2 className='text-3xl md:text-4xl text-center font-bold my-3'>
+                    EMPOWERING INDONESIA STARTUP
+                </h2>
                 <span className='text-center text-sm'>
                     Detikfinace memberikan ruang kepada para startup di Indonesia untuk
                     menunjukan, serta mempromosikan brand mereka untuk mendapatkan perhatian
