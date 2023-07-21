@@ -1,11 +1,19 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Nav from './components/Nav';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Register from './pages/Register';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+    <div>
+      <Nav />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/register' element={<Register />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
