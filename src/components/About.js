@@ -20,7 +20,7 @@ const About = () => {
             </div>
             <div className='mt-3 lg:mt-0 lg:max-w-[60%] flex lg:items-start flex-col
             items-center'>
-                <h2 className='text-2xl font-bold text-blue-500'>
+                <h2 className='text-2xl font-bold text-blue-500 text-center'>
                     About Detikfinace Business Plan Competition 2023
                 </h2>
                 <p className='my-3 text-center lg:text-start'>

@@ -7,7 +7,7 @@ const Hero = () => {
             <div className='absolute top-0 w-full h-full bg-gradient-to-b from-blue-500'></div>
             <div className='absolute z-[2] left-1/2 top-1/2 -translate-x-1/2
             -translate-y-1/2 flex flex-col items-center text-white'>
-                <p>Detikfinace Business Plan Competition 2023</p>
+                <p className="text-center">Detikfinace Business Plan Competition 2023</p>
                 <h2 className='text-3xl md:text-4xl text-center font-bold my-3'>
                     EMPOWERING INDONESIA STARTUP
                 </h2>

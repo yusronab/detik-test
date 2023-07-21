@@ -11,7 +11,7 @@ const Footer = () => {
             <h2 className='text-2xl font-extrabold'>BUSINESS PLAN</h2>
             <span className='tracking-[2px]'>COMPETITION 2023</span>
             <div className='flex justify-between flex-col md:flex-row mt-6 md:items-end'>
-                <p className='max-w-[65%]'>
+                <p className='md:max-w-[65%]'>
                     Detikfinance memberikan ruang kepada para startup di Indonesia untuk
                     menunjukan serta mempromosikan brand mereka untuk mendapatkan perhatian dari
                     venture capital atau angel investor
