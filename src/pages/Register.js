@@ -31,7 +31,7 @@ const Register = () => {
                 />
             </div>
             <h2 className='text-4xl font-bold mb-5 z-10 text-white'>Registrasi</h2>
-            <div className='container md:w-1/2 p-6 bg-white rounded-xl mb-5 z-10'>
+            <div className='container lg:w-1/2 p-6 bg-white rounded-xl mb-5 z-10'>
                 <form>
                     <input
                         type='text'
@@ -112,7 +112,7 @@ const Register = () => {
                             placeholder="Link Website *"
                             required
                             className="bg-slate-100 px-3 py-2 rounded-md transition-all
-                            duration-300 flex-auto"
+                            duration-300 flex-auto file:hidden text-slate-500"
                         />
                         <label
                             htmlFor="button-file-pdf"

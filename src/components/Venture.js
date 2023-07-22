@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-
+import RegisterBtn from "./RegisterBtn";
 import VentureSlider from "./VentureSlider";
 
 const Venture = () => {
@@ -10,8 +9,7 @@ const Venture = () => {
                 Menjadi Narasumber di Detikfinance
             </p>
             <VentureSlider />
-            <Link to={'/register'} className='btn bg-sky-500 text-white mt-3 py-2 px-5
-                font-semibold rounded'>Daftarkan startup kamu</Link>
+            <RegisterBtn />
         </div>
     );
 }
