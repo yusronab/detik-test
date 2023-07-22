@@ -4,9 +4,11 @@ import { BsFillPlusCircleFill } from 'react-icons/bs';
 
 const Register = () => {
     const [imageFile, setImageFile] = useState('');
+    const [pdfFile, setPdfFile] = useState('');
     const [checked, setChecked] = useState(false);
 
     const fileRef = useRef();
+    const pdfRef = useRef();
 
     const onImageHandler = () => {
         const image = fileRef.current.files[0]
@@ -16,6 +18,17 @@ const Register = () => {
 
         reader.addEventListener('load', () => {
             setImageFile(reader.result)
+        })
+    }
+
+    const onPdfHandler = () => {
+        const pdf = pdfRef.current.files[0]
+        const reader = new FileReader()
+
+        reader.readAsDataURL(pdf)
+
+        reader.addEventListener('load', () => {
+            setPdfFile(reader)
         })
     }
 
@@ -80,8 +93,8 @@ const Register = () => {
                             />
                             <label
                                 htmlFor="icon-button-file"
-                                className='absolute top-1/2 left-1/2 -translate-x-1/2
-                                -translate-y-1/2'
+                                className={`absolute top-1/2 left-1/2 -translate-x-1/2
+                                -translate-y-1/2 cursor-pointer ${imageFile && 'hidden'}`}
                             >
                                 <BsFillPlusCircleFill size={24} />
                             </label>
@@ -95,32 +108,38 @@ const Register = () => {
                             </ol>
                         </div>
                     </div>
-                    <input
-                        type='text'
-                        placeholder="Profil Perusahaan (Opsional)"
-                        className='w-full bg-slate-100 px-3 py-2 rounded-md transition-all
-                        duration-300 active:scale-95'
-                    />
-                    <span className='text-sm mb-4 block'>
-                        Format file .pdf, maksimal size 20mb
-                    </span>
-                    <div className="flex">
+                    <div className="flex relative items-center bg-slate-100 rounded">
+                        <span className={`text-slate-400 flex-auto px-3
+                        ${pdfFile && 'hidden'}`}>
+                            Profil Perusahaan atau Decik (opsional)
+                        </span>
                         <input
                             id="button-file-pdf"
                             type="file"
                             accept="application/pdf"
                             placeholder="Link Website *"
-                            required
-                            className="bg-slate-100 px-3 py-2 rounded-md transition-all
-                            duration-300 flex-auto file:hidden text-slate-500"
+                            ref={pdfRef}
+                            onChange={onPdfHandler}
+                            className={`bg-slate-100 px-3 py-2 flex-auto text-black
+                            file:hidden ${!pdfFile && 'hidden'}`}
                         />
                         <label
                             htmlFor="button-file-pdf"
-                            className='bg-blue-500 rounded-md px-10 py-[11px] text-white'
+                            className='bg-blue-500 rounded-md px-10 py-[11px] text-white
+                            cursor-pointer'
                         >
                             Upload file
                         </label>
                     </div>
+                    <span className='text-sm mb-4 block'>
+                        Format file .pdf, maksimal size 20mb
+                    </span>
+                    <input
+                        type='text'
+                        placeholder="Link Website *"
+                        className='w-full bg-slate-100 px-3 py-2 rounded-md transition-all
+                        duration-300 active:scale-95'
+                    />
                     <span className='text-sm mb-5 block'>
                         Website, Sosial Media, dll. Sertaka protokol URL (https:// atau http://)
                     </span>
