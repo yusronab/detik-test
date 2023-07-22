@@ -20,7 +20,7 @@ npm start
 
 # Live Demo
 
-Click [this link](https://github.com/yusronab) to try live demo.
+Click [this link](https://detikcom-yusroab.netlify.app/) to try live demo.
 
 # Preview
 
